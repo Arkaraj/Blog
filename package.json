@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "tw:build": "tailwindcss build ./css/app.css -o ./Public/style.css"
   },
   "keywords": [
     "blog"
@@ -12,8 +13,11 @@
   "author": "Arkaraj",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.2.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.12"
+    "mongoose": "^5.11.12",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
   }
 }
