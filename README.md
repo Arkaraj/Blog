@@ -11,6 +11,8 @@ Follow this link:
 
 https://tailwindcss.com/docs/installation
 
+Add this in package.json under scripts
+
 ```json
 "tw:build": "tailwindcss build ./css/app.css -o ./views/style.css"
 ```
