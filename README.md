@@ -5,6 +5,14 @@
 Started building the frontend with tailwind css
 Made the /posts route in front end
 
+### Slugify
+
+Helps create clean and neat urls, removes spaces
+
+### Method-Override
+
+A form only allow us GET and POST, dialog requests but this allows us to use other HTTP verbs like patch, delete 🥳
+
 ## Requirements
 
 Follow this link:
@@ -21,3 +29,5 @@ To run this:
 ```sh
 $ npm run tw:build 
 ```
+
+
