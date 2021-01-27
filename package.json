@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "tw:build": "tailwindcss build ./css/app.css -o ./Public/style.css"
+    "tw:build": "tailwindcss build ./css/app.css -o ./views/style.css"
   },
   "keywords": [
     "blog"
@@ -15,6 +15,7 @@
   "dependencies": {
     "autoprefixer": "^10.2.3",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mongoose": "^5.11.12",
     "postcss": "^8.2.4",

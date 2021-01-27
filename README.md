@@ -12,7 +12,7 @@ Follow this link:
 https://tailwindcss.com/docs/installation
 
 ```json
-"tw:build": "tailwindcss build ./css/app.css -o ./Public/style.css"
+"tw:build": "tailwindcss build ./css/app.css -o ./views/style.css"
 ```
 To run this:
 

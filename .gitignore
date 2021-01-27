@@ -1,4 +1,4 @@
 .vscode/
 node_modules/
 .env
-Public/style.css
+views/style.css
