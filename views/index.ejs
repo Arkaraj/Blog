@@ -7,6 +7,9 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
         integrity="sha512-+WF6UMXHki/uCy0vATJzyA9EmAcohIQuwpNz0qEO+5UeE5ibPejMRdFuARSrl1trs3skqie0rY/gNiolfaef5w=="
         crossorigin="anonymous" /> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
     <link rel="stylesheet" href="./style.css">
     <title>Blog</title>
 </head>
@@ -15,7 +18,9 @@
 
 <body class="dark">
     <section class="text-gray-600 dark:text-gray-400 body-font  dark:bg-gray-900">
-        <h1 class="text-center title-font text-lg font-medium text-gray-900 mb-3 text-3xl dark:text-white">Arkaraj's
+        <h1 class="text-center title-font text-lg font-medium text-gray-900 mb-3 text-3xl dark:text-white"
+            style="font-family: 'Roboto', sans-serif;">
+            Arkaraj's
             Blogs</h1>
         <%- include('_mode.ejs') %>
         <a href="/posts/new">
@@ -23,7 +28,8 @@
                 New Posts
             </button>
         </a>
-        <div class="text-center text-base">Hey, I am Arkaraj .... dummy Texts for now...</div>
+        <div class="text-center text-base">👋 Hey, I am Arkaraj, I am a web enthusiast. This blog has articles based on
+            my own experiences as I learn and try out new things.</div>
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -m-4">
                 <% if (posts.length == 0) { %>

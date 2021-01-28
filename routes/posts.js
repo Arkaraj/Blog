@@ -7,6 +7,11 @@ router.get('/new', (req, res) => {
     res.render('./posts/new', { article: new Article() })
 });
 
+router.get('/edit/:id', async (req, res) => {
+    const article = await Article.findById(req.params.id)
+    res.render('posts/edit', { article: article })
+});
+
 router.get('/:slug', async (req, res) => {
 
     const article = await Article.findOne({ slug: req.params.slug })
@@ -15,15 +20,11 @@ router.get('/:slug', async (req, res) => {
 
 });
 
-router.get('/edit/:id', async (req, res) => {
-    const article = await Article.findById(req.params.id);
-    res.render('posts/edit', { article: article });
-});
-
 router.post('/', async (req, res) => {
-    const { title, description, content } = req.body;
+    const { title, image, description, content } = req.body;
     let article = new Article({
         title,
+        image,
         description,
         markdown: content
     })
@@ -44,9 +45,10 @@ router.delete('/:id', async (req, res) => {
 })
 
 router.put('/:id', async (req, res) => {
-    const { title, description, content } = req.body;
+    const { title, image, description, content } = req.body;
     let article = await Article.findById(req.params.id);
     article.title = title;
+    article.image = image;
     article.description = description;
     article.markdown = content;
 
