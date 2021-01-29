@@ -29,14 +29,6 @@ To run this:
 ```sh
 $ npm run tw:build 
 ```
-### What all to add
 
-[x] Images in new posts
-[x] Authentication method
-[x] Styling in blog
-[x] Font family for the main page
-[] Quotes
-[x] Fix edit page
-[x] miscellaneous fixes
 
 
