@@ -40,6 +40,11 @@ blockquote {
 p {
     font-family: 'Open Sans', sans-serif;
 }
+@media only screen and (max-width: 800px){
+    p {
+        margin-bottom: 0rem;
+    }
+} 
 
 ::selection {
     background: #aaaaaa;

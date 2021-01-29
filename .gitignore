@@ -2,3 +2,4 @@
 node_modules/
 .env
 views/style.css
+./views/posts/_disqus.ejs

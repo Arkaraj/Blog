@@ -29,8 +29,8 @@
                 New Posts
             </button>
         </a>
-        <div class="text-center text-base">👋 Hey, I am Arkaraj, I am a web enthusiast. This blog has articles based on
-            my own experiences as I learn and try out new things.</div>
+        <div class="text-center text-base">👋 Hey, I am Arkaraj, I am a web enthusiast. This is my personal blog where I
+            put out my thoughts, I learn implement and I share those experiences in this blogs</div>
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -m-4">
                 <% if (posts.length == 0) { %>
@@ -66,7 +66,7 @@
                                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                         <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>1.2K
+                                    </svg>5 min read
                                 </span>
                                 <span
                                     class="text-gray-400 dark:text-gray-500 inline-flex items-center leading-none text-sm  inline-flex items-center leading-none text-sm cursor-pointer">
@@ -75,7 +75,7 @@
                                         <path
                                             d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
                                         </path>
-                                    </svg>6
+                                    </svg><a href="/posts/<%= post.slug %>#disqus_thread"></a>
                                 </span>
                             </div>
                             <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
@@ -96,7 +96,7 @@
 
 
     <%- include('_footer') %>
-
+    <script id="dsq-count-scr" src="//http-localhost-3000-8g4voabmon.disqus.com/count.js" async></script>
 </body>
 <script src="./main.js"></script>
 
