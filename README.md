@@ -2,8 +2,7 @@
 
 ## Progress
 
-Started building the frontend with tailwind css
-Made the /posts route in front end
+Done and Deployed 🚀 to Heroku
 
 ### Slugify
 
