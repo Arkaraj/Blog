@@ -21,7 +21,7 @@ pre {
     border-radius: 10px;
     line-height: 1.45;
     overflow: auto;
-    width: 75%;
+    width: 100%;
 }
 a:hover {
     text-decoration: none;
@@ -35,6 +35,15 @@ blockquote {
     background: #111111;
     width: 75%;
     color: #8b949e;
+}
+
+ul{
+    list-style: inherit;
+    padding-left: 1.2em;
+}
+ol{
+    list-style: decimal;
+    padding-left: 1.2em;
 }
 
 p {
