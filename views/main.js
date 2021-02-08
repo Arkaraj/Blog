@@ -1,5 +1,5 @@
 const ls = document.querySelector('#lightToggle');
-const svg = document.querySelectorAll('#modes');
+const [sun, moon] = document.querySelectorAll('#modes');
 const bodyTag = document.querySelector('body');
 const codeColor = document.querySelectorAll('code');
 if (!codeColor) {
@@ -9,13 +9,40 @@ if (!codeColor) {
 ls.addEventListener('click', () => {
     if (bodyTag.classList.contains('dark')) {
         bodyTag.classList.remove('dark');
+        localStorage.theme = 'light'
     } else {
         bodyTag.classList.add('dark');
+        localStorage.theme = 'dark'
+
     }
     toggleSvg();
 });
 
 function toggleSvg() {
+    if (localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        sun.classList.remove('hidden')
+        moon.classList.add('hidden')
+        if (codeColor) {
+            codeColor.forEach(clr => {
+                clr.style.color = '#e83e8c'
+            })
+
+        } else {
+
+        }
+    } else {
+        moon.classList.remove('hidden')
+        sun.classList.add('hidden')
+        if (codeColor) {
+            codeColor.forEach(clr => {
+                clr.style.color = '#a5d6ff'
+            })
+
+        } else {
+
+        }
+    }
+    /* const svg = document.querySelectorAll('#modes');
     svg.forEach((lsi) => {
         if (lsi.classList.contains('hidden')) {
             lsi.classList.remove('hidden')
@@ -37,7 +64,8 @@ function toggleSvg() {
 
             }
         }
-    });
+    });*/
+
 }
 
 function auth() {
@@ -45,3 +73,29 @@ function auth() {
 }
 const consolestyles = ['font-size: 46px', 'color: #757575'].join(';');
 console.log('%cArkaraj', consolestyles);
+
+const darkMode = () => {
+    // On page load or when changing themes
+
+    // Whenever the user explicitly chooses to respect the OS preference
+    // localStorage.removeItem('theme')
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        bodyTag.classList.add('dark')
+
+    } else {
+        bodyTag.classList.remove('dark')
+        moon.classList.add('hidden')
+        sun.classList.remove('hidden')
+        localStorage.theme = 'light'
+        if (codeColor) {
+            codeColor.forEach(clr => {
+                clr.style.color = '#e83e8c'
+            })
+
+        } else {
+
+        }
+    }
+
+}
