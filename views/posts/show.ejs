@@ -12,7 +12,7 @@
     <title> <%= article.title %> </title>
 </head>
 
-<body class="dark">
+<body class="dark" onload="darkMode()">
     <section class="text-black dark:text-gray-100 body-font  dark:bg-gray-900">
         <%- include('../_mode.ejs') %>
 
@@ -25,7 +25,7 @@
                 All Posts
             </a>
             <a href="/posts/edit/<%= article.id %>"
-                class="bg-green-500 mt-3 w-full hover:bg-green-600 text-white font-bold py-2 px-4 rounded text-center">
+                class="bg-green-500 mt-3 w-full hover:bg-green-600 text-white font-bold py-2 px-4 rounded text-center cursor-pointer">
                 Edit 🖋
             </a>
 
@@ -35,6 +35,9 @@
         <div
             class="sm:w-full  max-w-7xl mx-4 sm:pl-16 sm:py-8 border-gray-800 sm:border-t-0 border-t mt-4 pt-2 text-justify sm:text-center sm:mt-0">
 
+            <!-- image  width="720" height="400" -->
+            <img src=".<%= article.image %>" class="" alt="Blog image">
+
             <p class="leading-relaxed text-lg"><%- article.convHtml %></p>
 
         </div>
@@ -43,7 +46,7 @@
 
     </section>
 
-    <%- include('./_disqus.ejs') %>
+    /*include('./_disqus.ejs')
 
 
     <%- include('../_footer.ejs') %>

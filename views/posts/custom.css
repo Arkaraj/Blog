@@ -21,25 +21,38 @@ pre {
     border-radius: 10px;
     line-height: 1.45;
     overflow: auto;
-    width: 75%;
+    width: 100%;
 }
 a:hover {
     text-decoration: none;
 }
 
 blockquote {
-    font-size: 1em;
+    font-style: italic;
+    font-size: 1.4em;
     padding-left: 6px;
     margin-top: 2px;
-    border-left: 5px solid #333333;
-    background: #111111;
-    width: 75%;
+    box-shadow: inset 3px 0 0 0 rgb(41 41 41);
     color: #8b949e;
+}
+
+ul{
+    list-style: inherit;
+    padding-left: 1.2em;
+}
+ol{
+    list-style: decimal;
+    padding-left: 1.2em;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
 }
+@media only screen and (max-width: 800px){
+    p {
+        margin-bottom: 0rem;
+    }
+} 
 
 ::selection {
     background: #aaaaaa;

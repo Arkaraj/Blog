@@ -26,7 +26,8 @@ router.post('/', async (req, res) => {
         title,
         image,
         description,
-        markdown: content
+        markdown: content,
+        // tags: ["tech", "testing", "sports"], always do everything in lowercase
     })
 
     try {
