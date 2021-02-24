@@ -23,6 +23,7 @@ const articleSchema = new mongoose.Schema({
         type: String,
         default: './images/720x400.png'
     },
+    tags: [String],
     slug: {
         type: String,
         required: true,

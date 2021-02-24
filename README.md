@@ -38,5 +38,6 @@ $ npm run tw:build
 - [] Quotes
 - [x] Fix edit page
 - [x] miscellaneous fixes
+- [] Search bar and tags
 
 

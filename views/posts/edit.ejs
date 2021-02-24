@@ -14,16 +14,14 @@
     <title>Edit Blog</title>
 </head>
 
-<body>
+<body onload="darkMode()">
     <%- include('../_mode.ejs') %>
     <div class="container">
         <h1 class="text-4xl px-4">Edit Article</h1>
 
-        <%- include('_forms_field') %>
-
-        <!-- <form action="/posts/<%= /*article.id */%>?_method=PUT" method="POST">
-            
-        </form> -->
+        <form action="/posts/<%= article.id %>?_method=PUT" method="POST">
+            <%- include('_forms_field') %>
+        </form>
     </div>
 </body>
 

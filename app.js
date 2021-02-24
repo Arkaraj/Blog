@@ -21,7 +21,7 @@ mongoose.connect(`${process.env.URI}`, { useNewUrlParser: true, useUnifiedTopolo
     console.log('Successfully connected to Database!!');
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json());
 
@@ -38,6 +38,27 @@ app.get('/', async (req, res) => {
 
     res.render('index', { posts: posts })
 });
+
+app.post('/', async (req, res) => {
+
+    let { tag } = req.body
+
+    try {
+        tag = tag.toLowerCase()
+        const aritcle = await Article.find({ tags: tag }).sort({
+            date: 'desc'
+        })
+
+        res.render('index', { posts: aritcle })
+    } catch (err) {
+        console.log('Error: ' + err)
+        const posts = await Article.find().sort({
+            date: 'desc'
+        });
+        res.render('index', { posts: posts })
+    }
+
+})
 
 
 app.listen(port, () => {
